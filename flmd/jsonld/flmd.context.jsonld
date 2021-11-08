@@ -1,0 +1,87 @@
+{
+   "_comments": "Auto generated from flmd.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2021-11-07T14:14:57\n    Schema: essdive-flmd\n    \n    id: https://w3id.org/essdive/flmd\n    description: TEST DEMO of ESS-DIVE File Level Metadata standard\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "IAO": {
+         "@id": "http://purl.obolibrary.org/obo/IAO_",
+         "@prefix": true
+      },
+      "NCIT": {
+         "@id": "http://purl.obolibrary.org/obo/NCIT_",
+         "@prefix": true
+      },
+      "OBI": {
+         "@id": "http://purl.obolibrary.org/obo/OBI_",
+         "@prefix": true
+      },
+      "SIO": {
+         "@id": "http://semanticscience.org/resource/SIO_",
+         "@prefix": true
+      },
+      "allotrope_role": "http://purl.allotrope.org/ontologies/role#",
+      "bibo": "http://purl.org/ontology/bibo/",
+      "csvw": "http://www.w3.org/ns/csvw#",
+      "dbp": "http://dbpedia.org/ontology/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "flmd": "https://w3id.org/essdive/flmd/",
+      "hl7": "http://purl.bioontology.org/ontology/HL7/",
+      "linkml": "https://w3id.org/linkml/",
+      "mesh": "http://id.nlm.nih.gov/mesh/",
+      "oboe": "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "http://schema.org/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "wdp": "http://www.wikidata.org/prop/direct/",
+      "wgs": {
+         "@id": "http://www.w3.org/2003/01/geo/wgs84_pos",
+         "@prefix": true
+      },
+      "@vocab": "https://w3id.org/essdive/flmd/",
+      "records": {
+         "@type": "@id"
+      },
+      "Data_Orientation": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "Date_End": {
+         "@type": "xsd:dateTime"
+      },
+      "Date_Start": {
+         "@type": "xsd:dateTime"
+      },
+      "File_Description": {
+         "@id": "dcterms:description"
+      },
+      "Latitude": {
+         "@type": "xsd:decimal",
+         "@id": "wgs:lat"
+      },
+      "Longitude": {
+         "@type": "xsd:decimal",
+         "@id": "wgs:long"
+      },
+      "Northwest_Latitude_Coordinate": {
+         "@type": "xsd:decimal"
+      },
+      "Northwest_Longitude_Coordinate": {
+         "@type": "xsd:decimal"
+      },
+      "Notes": {
+         "@id": "skos:note"
+      },
+      "Southeast_Latitude_Coordinate": {
+         "@type": "xsd:decimal"
+      },
+      "Southeast_Longitude_Coordinate": {
+         "@type": "xsd:decimal"
+      },
+      "Standard": {
+         "@id": "dcterms:conformsTo"
+      }
+   }
+}

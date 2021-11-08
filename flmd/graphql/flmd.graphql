@@ -1,0 +1,26 @@
+type Container
+  {
+    records: [FileLevelMetadata]
+  }
+
+type FileLevelMetadata
+  {
+    fileName: String!
+    fileDescription: String!
+    standard: String
+    uTCOffset: String
+    fileVersion: String
+    contact: String
+    dateStart: Datetime
+    dateEnd: Datetime
+    northwestLatitudeCoordinate: DecimalDegree
+    northwestLongitudeCoordinate: DecimalDegree
+    southeastLatitudeCoordinate: DecimalDegree
+    southeastLongitudeCoordinate: DecimalDegree
+    latitude: DecimalDegree
+    longitude: DecimalDegree
+    missingValueCodes: String
+    dataOrientation: DataOrientationEnum
+    notes: String
+  }
+

@@ -1,0 +1,24 @@
+message Container
+ {
+  repeated records FileLevelMetadata = 1
+ }
+message FileLevelMetadata
+ {
+  fileName String = 1
+  fileDescription String = 2
+  optional standard String = 3
+  optional uTCOffset String = 4
+  optional fileVersion String = 5
+  optional contact String = 6
+  optional dateStart Datetime = 7
+  optional dateEnd Datetime = 8
+  optional northwestLatitudeCoordinate DecimalDegree = 9
+  optional northwestLongitudeCoordinate DecimalDegree = 10
+  optional southeastLatitudeCoordinate DecimalDegree = 11
+  optional southeastLongitudeCoordinate DecimalDegree = 12
+  optional latitude DecimalDegree = 13
+  optional longitude DecimalDegree = 14
+  optional missingValueCodes String = 15
+  optional dataOrientation DataOrientationEnum = 16
+  optional notes String = 17
+ }

@@ -1,0 +1,22 @@
+{
+   "IAO": "http://purl.obolibrary.org/obo/IAO_",
+   "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
+   "OBI": "http://purl.obolibrary.org/obo/OBI_",
+   "SIO": "http://semanticscience.org/resource/SIO_",
+   "allotrope_role": "http://purl.allotrope.org/ontologies/role#",
+   "bibo": "http://purl.org/ontology/bibo/",
+   "csvw": "http://www.w3.org/ns/csvw#",
+   "dbp": "http://dbpedia.org/ontology/",
+   "dcterms": "http://purl.org/dc/terms/",
+   "dwc": "http://rs.tdwg.org/dwc/terms/",
+   "flmd": "https://w3id.org/essdive/flmd/",
+   "hl7": "http://purl.bioontology.org/ontology/HL7/",
+   "linkml": "https://w3id.org/linkml/",
+   "mesh": "http://id.nlm.nih.gov/mesh/",
+   "oboe": "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "skos": "http://www.w3.org/2004/02/skos/core#",
+   "wdp": "http://www.wikidata.org/prop/direct/",
+   "wgs": "http://www.w3.org/2003/01/geo/wgs84_pos"
+}

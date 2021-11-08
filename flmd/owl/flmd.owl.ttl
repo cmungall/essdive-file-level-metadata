@@ -1,0 +1,271 @@
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix flmd: <https://w3id.org/essdive/flmd/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/essdive/flmd> a owl:Ontology ;
+    rdfs:label "essdive-flmd" ;
+    IAO:0000700 flmd:Container,
+        flmd:FileLevelMetadata ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    skos:definition "TEST DEMO of ESS-DIVE File Level Metadata standard" ;
+    linkml:generation_date "2021-11-07T14:14:59" ;
+    linkml:metamodel_version "1.7.0" ;
+    linkml:source_file "flmd.yaml" ;
+    linkml:source_file_date "2021-11-07T14:14:50" ;
+    linkml:source_file_size 10423 .
+
+linkml:SubsetDefinition a owl:Class ;
+    rdfs:label "subset_definition" ;
+    skos:definition "the name and description of a subset" .
+
+dcterms:conformsTo a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Standard" ;
+    dcterms:title "Standard applied to the data file." ;
+    rdfs:range linkml:String ;
+    rdfs:seeAlso "dcterms:Standard" ;
+    skos:definition "Identify if an ESS-DIVE Reporting Format or any other data or metadata standard was applied to the data file." ;
+    linkml:examples "Example(value='EPA', description=None)" .
+
+dcterms:description a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "File_Description" ;
+    dcterms:title "A brief description of the file" ;
+    rdfs:range linkml:String ;
+    skos:definition "A brief description (minimum 30 characters) of the file and what distinguishes this file from other files in the data package. Include information about the type of data (images, observations, experimental, etc.)" ;
+    linkml:examples "Example(value='50 soil pore water samples taken from the hillslope at the site over a one year period.', description=None)" .
+
+wgs:lat a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Latitude" ;
+    rdfs:range flmd:DecimalDegree ;
+    linkml:examples "Example(value='35.628784', description=None)" .
+
+wgs:long a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Longitude" ;
+    rdfs:range flmd:DecimalDegree ;
+    linkml:examples "Example(value='-83.721385', description=None)" .
+
+skos:note a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Notes" ;
+    dcterms:title "Any information the provider would like to add." ;
+    rdfs:range linkml:String ;
+    skos:definition "Information provided would be data file specific. Details may include details on data file versioning, reporting format, software requirements, data quality, etc." ;
+    linkml:examples "Example(value='File version changed Dec. 2019. Two columns were added to the data file since original publication. Columns add clarity for sample locations. No data were changed.', description=None)" .
+
+flmd:Contact a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Contact" ;
+    dcterms:title "Contact for the file" ;
+    rdfs:range linkml:String ;
+    skos:definition "Provide first and last name of the contact for the file. This should be someone with information already recorded at the Data Package Level" ;
+    linkml:examples "Example(value='Katie Jones', description=None)" .
+
+flmd:Container a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Container" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom flmd:FileLevelMetadata ;
+            owl:onProperty flmd:records ] ;
+    skos:exactMatch csvw:TableGroup .
+
+flmd:Data_Orientation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Data_Orientation" ;
+    dcterms:title "Orientation of tabular data" ;
+    rdfs:range <http://UNKNOWN.org/Data_Orientation_Enum> ;
+    skos:definition "Describe how the data are organized within the data matrix. Choose between \"horizontal\" (i.e., data are organized in rows) or \"vertical\" (i.e., data are organized in columns)." ;
+    linkml:examples "Example(value='horizontal', description=None)" .
+
+flmd:Date_End a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Date_End" ;
+    dcterms:title "The latest date in the file" ;
+    rdfs:range linkml:Datetime ;
+    linkml:examples "Example(value='2019-10-10', description=None)" .
+
+flmd:Date_Start a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Date_Start" ;
+    dcterms:title "The earliest date in the file" ;
+    rdfs:range linkml:Datetime ;
+    linkml:examples "Example(value='2019-10-01', description=None)" .
+
+flmd:File_Name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "File_Name" ;
+    dcterms:title "Name of the file" ;
+    rdfs:range linkml:String ;
+    skos:definition "Provide the name of the associated file. File names should be unique and be as descriptive as possible about the file contents. Use only letters (e.g. CamelCase), numbers, and underscores. Do not include spaces. Hyphens allowed but not preferred. Use \"*\" wildcard when the FLMD applies to multiple files. For example - the same FLMD applies to all soil core files in this data package - \"soil_cores_*.csv\"      " ;
+    linkml:examples "Example(value='SoilPoreWaterHillslope2019.csv', description=None)",
+        "Example(value='soil_cores_*.csv', description=None)" .
+
+flmd:File_Version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "File_Version" ;
+    dcterms:title "The version of the file" ;
+    rdfs:range linkml:String ;
+    skos:definition "This is the version of the data file being described in the FLMD. The data file version is assigned by the data provider and not by the system. This would change if the data file is updated after the data package is published. Changes should be explained in the Notes field." ;
+    linkml:examples "Example(value='1', description=None)" .
+
+flmd:Missing_Value_Codes a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Missing_Value_Codes" ;
+    dcterms:title "Report missing value codes" ;
+    rdfs:range linkml:String ;
+    skos:definition "Report all Missing Value Codes. For columns containing numeric data, use \"-9999\" as the missing value code (or modify to match significant figures given the data). For columns containing character data, use \"N/A\" as the missing value code. If entering more than one missing value code, use a vertical bar \"|\" or semicolon \";\" instead of a comma or protect the comma with matching double quotation marks around the entire value. For more information about commas not meant to be a delimiter (e.g. used within a cell), refer to the Delimiter section of the CSV Reporting Format Detailed Guide." ;
+    linkml:examples "Example(value='-9999; N/A', description=None)" .
+
+flmd:Northwest_Latitude_Coordinate a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Northwest_Latitude_Coordinate" ;
+    dcterms:title "Northwest Latitude Coordinate for non-point location" ;
+    rdfs:range flmd:DecimalDegree ;
+    skos:definition "This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+    linkml:examples "Example(value='35.608619', description=None)" .
+
+flmd:Northwest_Longitude_Coordinate a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Northwest_Longitude_Coordinate" ;
+    dcterms:title "Northwest Longitude Coordinate for non-point location" ;
+    rdfs:range flmd:DecimalDegree ;
+    skos:definition "This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+    linkml:examples "Example(value='-83.675032', description=None)" .
+
+flmd:Southeast_Latitude_Coordinate a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Southeast_Latitude_Coordinate" ;
+    dcterms:title "Southeast Latitude Coordinate for non-point location" ;
+    rdfs:range flmd:DecimalDegree ;
+    skos:definition "This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+    linkml:examples "Example(value='35.603597', description=None)" .
+
+flmd:Southeast_Longitude_Coordinate a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "Southeast_Longitude_Coordinate" ;
+    dcterms:title "Southeast Longitude Coordinate for non-point location" ;
+    rdfs:range flmd:DecimalDegree ;
+    skos:definition "This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+    linkml:examples "Example(value='-83662760', description=None)" .
+
+flmd:UTC_Offset a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "UTC_Offset" ;
+    dcterms:title "Local Standard Time Offset" ;
+    rdfs:range linkml:String ;
+    skos:definition "Report the Local Standard Time offset (+/- #hours) or time zone (abbreviations allowed). Do not report time using Daylight Savings Time." ;
+    linkml:examples "Example(value='- 5 hours', description=None)" .
+
+flmd:records a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "records" ;
+    rdfs:range flmd:FileLevelMetadata .
+
+linkml:TypeDefinition a owl:Class ;
+    rdfs:label "type_definition" ;
+    skos:definition "A data type definition." .
+
+linkml:topValue a owl:DatatypeProperty ;
+    rdfs:label "value" .
+
+linkml:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" ;
+    skos:definition "the definition of a class or interface" .
+
+flmd:FileLevelMetadata a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "FileLevelMetadata" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:File_Version ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Data_Orientation_Enum> ;
+            owl:onProperty flmd:Data_Orientation ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:Missing_Value_Codes ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty dcterms:description ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Datetime ;
+            owl:onProperty flmd:Date_End ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty wgs:long ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty wgs:lat ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty flmd:Southeast_Longitude_Coordinate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty skos:note ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty flmd:Southeast_Latitude_Coordinate ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:File_Name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:Contact ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty dcterms:conformsTo ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Datetime ;
+            owl:onProperty flmd:Date_Start ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:UTC_Offset ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty flmd:Northwest_Longitude_Coordinate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty flmd:Northwest_Latitude_Coordinate ] ;
+    skos:exactMatch csvw:Table .
+
+flmd:DecimalDegree a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:label "decimal_degree" ;
+    rdfs:seeAlso "https://en.wikipedia.org/wiki/Decimal_degrees" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A decimal degree expresses latitude or longitude as decimal fractions." .
+
+linkml:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" ;
+    skos:definition "the definition of a property or a slot" .
+
+

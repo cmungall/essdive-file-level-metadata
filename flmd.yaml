@@ -1,0 +1,272 @@
+name: essdive-flmd
+description: TEST DEMO of ESS-DIVE File Level Metadata standard
+id: https://w3id.org/essdive/flmd
+imports:
+- linkml:types
+default_curi_maps:
+  - semweb_context
+prefixes:
+  linkml: https://w3id.org/linkml/
+  flmd: https://w3id.org/essdive/flmd/
+  wgs: http://www.w3.org/2003/01/geo/wgs84_pos
+  schema: http://schema.org/
+  skos: http://www.w3.org/2004/02/skos/core#
+  csvw: http://www.w3.org/ns/csvw#
+  mesh: http://id.nlm.nih.gov/mesh/
+  oboe: http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  IAO: http://purl.obolibrary.org/obo/IAO_
+  allotrope_role: http://purl.allotrope.org/ontologies/role#
+  dcterms: http://purl.org/dc/terms/
+  SIO: http://semanticscience.org/resource/SIO_
+  bibo: http://purl.org/ontology/bibo/
+  hl7: http://purl.bioontology.org/ontology/HL7/
+  wdp: http://www.wikidata.org/prop/direct/
+  dwc: http://rs.tdwg.org/dwc/terms/
+  dbp: http://dbpedia.org/ontology/
+default_prefix: flmd
+
+types:
+  decimal_degree:
+    description: >-
+      A decimal degree expresses latitude or longitude as decimal fractions.
+    uri: xsd:decimal
+    base: float
+    see_also:
+      - https://en.wikipedia.org/wiki/Decimal_degrees
+
+slots:
+  
+  File_Name:
+    title: Name of the file
+    description: >-
+      Provide the name of the associated file.
+      File names should be unique and be as descriptive as possible about the file contents. Use only letters (e.g. CamelCase), numbers, and underscores.
+      Do not include spaces. Hyphens allowed but not preferred. Use "*" wildcard when the FLMD applies to multiple files.
+      For example - the same FLMD applies to all soil core files in this data package - "soil_cores_*.csv"      
+    exact_mappings:
+    - dbp:filename
+    - NCIT:C171191
+    examples:
+    - value: SoilPoreWaterHillslope2019.csv
+    - value: soil_cores_*.csv
+    range: string
+    required: true
+    
+  File_Description:
+    slot_uri: dcterms:description
+    title: A brief description of the file
+    description: >-
+      A brief description (minimum 30 characters) of the file and what distinguishes this file from other files in the data package.
+      Include information about the type of data (images, observations, experimental, etc.)
+    exact_mappings:
+    - NCIT:C171190
+    examples:
+    - value: 50 soil pore water samples taken from the hillslope at the site over
+        a one year period.
+    range: string
+    required: true
+    
+  Standard:
+    slot_uri: dcterms:conformsTo
+    title: Standard applied to the data file.
+    description: >-
+      Identify if an ESS-DIVE Reporting Format or any other data or metadata standard was applied to the data file.
+    exact_mappings:
+    - mesh:D012015
+    - allotrope_role:AFRL_0000233
+    - oboe:Standard
+    - NCIT:C44275
+    - allotrope_role:AFRL_0000255
+    - SIO:000618
+    - bibo:Standard
+    see_also:
+    - dcterms:Standard
+    examples:
+    - value: EPA
+    range: string
+    recommended: true
+    
+  UTC_Offset:
+    title: Local Standard Time Offset
+    description: >-
+      Report the Local Standard Time offset (+/- #hours) or time zone (abbreviations allowed). Do not report time using Daylight Savings Time.
+    pattern: "^[\\+|\\-] \\d+ hours"
+    exact_mappings:
+    - dbp:utcOffset
+    - wdp:P2907
+    examples:
+    - value: '- 5 hours'
+    range: string
+    recommended: true
+    
+  File_Version:
+    title: The version of the file
+    description: >-
+      This is the version of the data file being described in the FLMD. The data file version is assigned by the data provider and not by the system. This would change if the data file is updated after the data package is published. Changes should be explained in the Notes field.
+    exact_mappings:
+    - dbp:version
+    examples:
+    - value: '1'
+    range: string
+    
+  Contact:
+    title: Contact for the file
+    description: >-
+      Provide first and last name of the contact for the file. This should be someone with information already recorded at the Data Package Level
+    exact_mappings:
+    - hl7:C0337611
+    examples:
+    - value: Katie Jones
+    range: string
+    
+  Date_Start:
+    title: The earliest date in the file
+    examples:
+    - value: '2019-10-01'
+    range: datetime
+    
+  Date_End:
+    title: The latest date in the file
+    examples:
+    - value: '2019-10-10'
+    range: datetime
+    
+  Northwest_Latitude_Coordinate:
+    title: Northwest Latitude Coordinate for non-point location
+    description: >-
+      This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.
+    examples:
+    - value: '35.608619'
+    range: decimal_degree
+    minimum_value: -90
+    maximum_value: 90
+    
+  Northwest_Longitude_Coordinate:
+    description: >-
+      This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.
+    title: Northwest Longitude Coordinate for non-point location
+    examples:
+    - value: '-83.675032'
+    range: decimal_degree
+    minimum_value: -90
+    maximum_value: 90
+    
+  Southeast_Latitude_Coordinate:
+    title: Southeast Latitude Coordinate for non-point location
+    description: >-
+      This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.
+    examples:
+    - value: '35.603597'
+    range: decimal_degree
+    minimum_value: -90
+    maximum_value: 90
+    
+  Southeast_Longitude_Coordinate:
+    title: Southeast Longitude Coordinate for non-point location
+    description: >-
+      This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.
+    examples:
+    - value: '-83662760'
+    range: decimal_degree
+    minimum_value: -90
+    maximum_value: 90
+    
+  Latitude:
+    slot_uri: wgs:lat
+    exact_mappings:
+    - dwc:decimalLatitude
+    - OBI:0001620
+    - SIO:000319
+    examples:
+    - value: '35.628784'
+    range: decimal_degree
+    minimum_value: -90
+    maximum_value: 90
+    
+  Longitude:
+    slot_uri: wgs:long
+    exact_mappings:
+    - dwc:decimalLongitude
+    - OBI:0001621
+    - SIO:000318
+    examples:
+    - value: '-83.721385'
+    range: decimal_degree
+    minimum_value: -90
+    maximum_value: 90
+    
+  Missing_Value_Codes:
+    title: Report missing value codes
+    description: >-
+      Report all Missing Value Codes. For columns containing numeric data, use "-9999" as the missing value code (or modify to match significant figures given the data). For columns containing character data, use "N/A" as the missing value code. If entering more than one missing value code, use a vertical bar "|" or semicolon ";" instead of a comma or protect the comma with matching double quotation marks around the entire value. For more information about commas not meant to be a delimiter (e.g. used within a cell), refer to the Delimiter section of the CSV Reporting Format Detailed Guide.
+    examples:
+    - value: -9999; N/A
+    range: string
+    close_mappings:
+    - OBI:0000852
+    
+  Data_Orientation:
+    title: Orientation of tabular data
+    description: >-
+      Describe how the data are organized within the data matrix. Choose between "horizontal" (i.e., data are organized in rows) or "vertical" (i.e., data are organized in columns).
+    examples:
+    - value: horizontal
+    range: Data_Orientation_Enum
+    
+  Notes:
+    slot_uri: skos:note
+    title: Any information the provider would like to add.
+    description: >-
+      Information provided would be data file specific. Details may include details on data file versioning, reporting format, software requirements, data quality, etc.
+    exact_mappings:
+    - IAO:0000634
+    - rdfs:comment
+    examples:
+    - value: File version changed Dec. 2019. Two columns were added to the data file
+        since original publication. Columns add clarity for sample locations. No data
+        were changed.
+    range: string
+    
+classes:
+  
+  Container:
+    exact_mappings:
+    - csvw:TableGroup
+    attributes:
+      records:
+        range: FileLevelMetadata
+        multivalued: true
+        inlined_as_list: true
+        exact_mappings:
+        - csvw:table
+        
+  FileLevelMetadata:
+    exact_mappings:
+    - csvw:Table
+    slots:
+    - File_Name
+    - File_Description
+    - Standard
+    - UTC_Offset
+    - File_Version
+    - Contact
+    - Date_Start
+    - Date_End
+    - Northwest_Latitude_Coordinate
+    - Northwest_Longitude_Coordinate
+    - Southeast_Latitude_Coordinate
+    - Southeast_Longitude_Coordinate
+    - Latitude
+    - Longitude
+    - Missing_Value_Codes
+    - Data_Orientation
+    - Notes
+
+enums:
+  Data_Orientation_Enum:
+    permissible_values:
+      horizontal:
+      vertical:
+

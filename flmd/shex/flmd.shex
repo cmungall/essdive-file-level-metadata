@@ -1,0 +1,68 @@
+BASE <https://w3id.org/essdive/flmd/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+
+<DecimalDegree> xsd:decimal
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:Uriorcurie IRI
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<Container> CLOSED {
+    (  $<Container_tes> <records> @<FileLevelMetadata> * ;
+       rdf:type [ <Container> ] ?
+    )
+}
+
+<FileLevelMetadata> CLOSED {
+    (  $<FileLevelMetadata_tes> (  <File_Name> @linkml:String ;
+          dc:description @linkml:String ;
+          dc:conformsTo @linkml:String ? ;
+          <UTC_Offset> @linkml:String ? ;
+          <File_Version> @linkml:String ? ;
+          <Contact> @linkml:String ? ;
+          <Date_Start> @linkml:Datetime ? ;
+          <Date_End> @linkml:Datetime ? ;
+          <Northwest_Latitude_Coordinate> @<DecimalDegree> ? ;
+          <Northwest_Longitude_Coordinate> @<DecimalDegree> ? ;
+          <Southeast_Latitude_Coordinate> @<DecimalDegree> ? ;
+          <Southeast_Longitude_Coordinate> @<DecimalDegree> ? ;
+          <http://www.w3.org/2003/01/geo/wgs84_poslat> @<DecimalDegree> ? ;
+          <http://www.w3.org/2003/01/geo/wgs84_poslong> @<DecimalDegree> ? ;
+          <Missing_Value_Codes> @linkml:String ? ;
+          <Data_Orientation> @<DataOrientationEnum> ? ;
+          skos:note @linkml:String ?
+       ) ;
+       rdf:type [ <FileLevelMetadata> ] ?
+    )
+}
+
+
