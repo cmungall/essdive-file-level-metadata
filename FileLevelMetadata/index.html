@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Class: FileLevelMetadata - ESS DIVE</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Class: FileLevelMetadata";
+    var mkdocs_page_input_path = "FileLevelMetadata.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SYBSJVZ23"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2SYBSJVZ23');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ESS DIVE</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Index</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ESS DIVE</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Class: FileLevelMetadata</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="class-filelevelmetadata">Class: FileLevelMetadata</h1>
+<p>URI: <a href="https://w3id.org/essdive/flmd/FileLevelMetadata">flmd:FileLevelMetadata</a></p>
+<p><a href="https://yuml.me/diagram/nofunky;dir:TB/class/[Container]++-%20records%200..*&gt;[FileLevelMetadata&#124;File_Name:string;File_Description:string;Standard:string%20%3F;UTC_Offset:string%20%3F;File_Version:string%20%3F;Contact:string%20%3F;Date_Start:datetime%20%3F;Date_End:datetime%20%3F;Northwest_Latitude_Coordinate:decimal_degree%20%3F;Northwest_Longitude_Coordinate:decimal_degree%20%3F;Southeast_Latitude_Coordinate:decimal_degree%20%3F;Southeast_Longitude_Coordinate:decimal_degree%20%3F;Latitude:decimal_degree%20%3F;Longitude:decimal_degree%20%3F;Missing_Value_Codes:string%20%3F;Data_Orientation:Data_Orientation_Enum%20%3F;Notes:string%20%3F],[Container]"><img alt="img" src="https://yuml.me/diagram/nofunky;dir:TB/class/[Container]++-%20records%200..*&gt;[FileLevelMetadata&#124;File_Name:string;File_Description:string;Standard:string%20%3F;UTC_Offset:string%20%3F;File_Version:string%20%3F;Contact:string%20%3F;Date_Start:datetime%20%3F;Date_End:datetime%20%3F;Northwest_Latitude_Coordinate:decimal_degree%20%3F;Northwest_Longitude_Coordinate:decimal_degree%20%3F;Southeast_Latitude_Coordinate:decimal_degree%20%3F;Southeast_Longitude_Coordinate:decimal_degree%20%3F;Latitude:decimal_degree%20%3F;Longitude:decimal_degree%20%3F;Missing_Value_Codes:string%20%3F;Data_Orientation:Data_Orientation_Enum%20%3F;Notes:string%20%3F],[Container]" /></a></p>
+<h2 id="referenced-by-class">Referenced by Class</h2>
+<ul>
+<li><strong>None</strong> <em><a href="../container__records/">➞records</a></em>  <sub>0..*</sub>  <strong><a href="./">FileLevelMetadata</a></strong></li>
+</ul>
+<h2 id="attributes">Attributes</h2>
+<h3 id="own">Own</h3>
+<ul>
+<li><a href="../File_Name/">File_Name</a>  <sub>1..1</sub><ul>
+<li>Description: Provide the name of the associated file. File names should be unique and be as descriptive as possible about the file contents. Use only letters (e.g. CamelCase), numbers, and underscores. Do not include spaces. Hyphens allowed but not preferred. Use "<em>" wildcard when the FLMD applies to multiple files. For example - the same FLMD applies to all soil core files in this data package - "soil_cores_</em>.csv"      </li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: SoilPoreWaterHillslope2019.csv None</li>
+<li>Example: soil_cores_*.csv None</li>
+</ul>
+</li>
+<li><a href="../File_Description/">File_Description</a>  <sub>1..1</sub><ul>
+<li>Description: A brief description (minimum 30 characters) of the file and what distinguishes this file from other files in the data package. Include information about the type of data (images, observations, experimental, etc.)</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: 50 soil pore water samples taken from the hillslope at the site over a one year period. None</li>
+</ul>
+</li>
+<li><a href="../Standard/">Standard</a>  <sub>0..1</sub><ul>
+<li>Description: Identify if an ESS-DIVE Reporting Format or any other data or metadata standard was applied to the data file.</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: EPA None</li>
+</ul>
+</li>
+<li><a href="../UTC_Offset/">UTC_Offset</a>  <sub>0..1</sub><ul>
+<li>Description: Report the Local Standard Time offset (+/- #hours) or time zone (abbreviations allowed). Do not report time using Daylight Savings Time.</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: - 5 hours None</li>
+</ul>
+</li>
+<li><a href="../File_Version/">File_Version</a>  <sub>0..1</sub><ul>
+<li>Description: This is the version of the data file being described in the FLMD. The data file version is assigned by the data provider and not by the system. This would change if the data file is updated after the data package is published. Changes should be explained in the Notes field.</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: 1 None</li>
+</ul>
+</li>
+<li><a href="../Contact/">Contact</a>  <sub>0..1</sub><ul>
+<li>Description: Provide first and last name of the contact for the file. This should be someone with information already recorded at the Data Package Level</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: Katie Jones None</li>
+</ul>
+</li>
+<li><a href="../Date_Start/">Date_Start</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../types/Datetime/">Datetime</a></li>
+<li>Example: 2019-10-01 None</li>
+</ul>
+</li>
+<li><a href="../Date_End/">Date_End</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../types/Datetime/">Datetime</a></li>
+<li>Example: 2019-10-10 None</li>
+</ul>
+</li>
+<li><a href="../Northwest_Latitude_Coordinate/">Northwest_Latitude_Coordinate</a>  <sub>0..1</sub><ul>
+<li>Description: This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.</li>
+<li>Range: <a href="../types/DecimalDegree/">DecimalDegree</a></li>
+<li>Example: 35.608619 None</li>
+</ul>
+</li>
+<li><a href="../Northwest_Longitude_Coordinate/">Northwest_Longitude_Coordinate</a>  <sub>0..1</sub><ul>
+<li>Description: This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.</li>
+<li>Range: <a href="../types/DecimalDegree/">DecimalDegree</a></li>
+<li>Example: -83.675032 None</li>
+</ul>
+</li>
+<li><a href="../Southeast_Latitude_Coordinate/">Southeast_Latitude_Coordinate</a>  <sub>0..1</sub><ul>
+<li>Description: This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.</li>
+<li>Range: <a href="../types/DecimalDegree/">DecimalDegree</a></li>
+<li>Example: 35.603597 None</li>
+</ul>
+</li>
+<li><a href="../Southeast_Longitude_Coordinate/">Southeast_Longitude_Coordinate</a>  <sub>0..1</sub><ul>
+<li>Description: This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format.</li>
+<li>Range: <a href="../types/DecimalDegree/">DecimalDegree</a></li>
+<li>Example: -83662760 None</li>
+</ul>
+</li>
+<li><a href="../Latitude/">Latitude</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../types/DecimalDegree/">DecimalDegree</a></li>
+<li>Example: 35.628784 None</li>
+</ul>
+</li>
+<li><a href="../Longitude/">Longitude</a>  <sub>0..1</sub><ul>
+<li>Range: <a href="../types/DecimalDegree/">DecimalDegree</a></li>
+<li>Example: -83.721385 None</li>
+</ul>
+</li>
+<li><a href="../Missing_Value_Codes/">Missing_Value_Codes</a>  <sub>0..1</sub><ul>
+<li>Description: Report all Missing Value Codes. For columns containing numeric data, use "-9999" as the missing value code (or modify to match significant figures given the data). For columns containing character data, use "N/A" as the missing value code. If entering more than one missing value code, use a vertical bar "|" or semicolon ";" instead of a comma or protect the comma with matching double quotation marks around the entire value. For more information about commas not meant to be a delimiter (e.g. used within a cell), refer to the Delimiter section of the CSV Reporting Format Detailed Guide.</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: -9999; N/A None</li>
+</ul>
+</li>
+<li><a href="../Data_Orientation/">Data_Orientation</a>  <sub>0..1</sub><ul>
+<li>Description: Describe how the data are organized within the data matrix. Choose between "horizontal" (i.e., data are organized in rows) or "vertical" (i.e., data are organized in columns).</li>
+<li>Range: <a href="../Data_Orientation_Enum/">Data_Orientation_Enum</a></li>
+<li>Example: horizontal None</li>
+</ul>
+</li>
+<li><a href="../Notes/">Notes</a>  <sub>0..1</sub><ul>
+<li>Description: Information provided would be data file specific. Details may include details on data file versioning, reporting format, software requirements, data quality, etc.</li>
+<li>Range: <a href="../types/String/">String</a></li>
+<li>Example: File version changed Dec. 2019. Two columns were added to the data file since original publication. Columns add clarity for sample locations. No data were changed. None</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-properties">Other properties</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exact Mappings:</strong></td>
+<td></td>
+<td>csvw:Table</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
