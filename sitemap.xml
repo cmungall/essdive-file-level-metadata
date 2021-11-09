@@ -1,188 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Contact/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Container/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Data_Orientation/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Data_Orientation_Enum/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Date_End/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Date_Start/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/FileLevelMetadata/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/File_Description/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/File_Name/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/File_Version/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Latitude/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Longitude/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Missing_Value_Codes/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Northwest_Latitude_Coordinate/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Northwest_Longitude_Coordinate/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Notes/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Southeast_Latitude_Coordinate/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Southeast_Longitude_Coordinate/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/Standard/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/UTC_Offset/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/container__records/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/flmd/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Boolean/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Date/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Datetime/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Decimal/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/DecimalDegree/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Double/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Float/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Integer/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Ncname/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Nodeidentifier/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Objectidentifier/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/String/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Time/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2021-11-08</lastmod>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Uri/</loc>
+         <lastmod>2021-11-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cmungall.github.io/essdive-file-level-metadata/types/Uriorcurie/</loc>
+         <lastmod>2021-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
