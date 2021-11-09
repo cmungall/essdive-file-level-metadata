@@ -23,3 +23,6 @@ test: all-examples
 
 testdocs:
 	mkdocs serve
+
+gh-deploy:
+	mkdocs gh-deploy

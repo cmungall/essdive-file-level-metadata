@@ -345,7 +345,7 @@
         "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard",
         "http://purl.obolibrary.org/obo/NCIT_C44275",
         "http://purl.allotrope.org/ontologies/role#AFRL_0000255",
-        "http://semanticscience.org/resource/SIO_SIO_000618",
+        "http://semanticscience.org/resource/SIO_000618",
         "http://purl.org/ontology/bibo/Standard"
       ],
       "description": "Identify if an ESS-DIVE Reporting Format or any other data or metadata standard was applied to the data file.",
@@ -576,7 +576,7 @@
       "exact_mappings": [
         "http://rs.tdwg.org/dwc/terms/decimalLatitude",
         "http://purl.obolibrary.org/obo/OBI_0001620",
-        "http://semanticscience.org/resource/SIO_SIO_000319"
+        "http://semanticscience.org/resource/SIO_000319"
       ],
       "examples": [
         {
@@ -772,9 +772,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "flmd.yaml",
-  "source_file_date": "2021-11-07T14:14:50",
-  "source_file_size": 10423,
-  "generation_date": "2021-11-07T14:14:58",
+  "source_file_date": "2021-11-07T14:17:49",
+  "source_file_size": 10415,
+  "generation_date": "2021-11-08T17:09:21",
   "@type": "SchemaDefinition",
   "@context": [
     "flmd/jsonld/flmd.context.jsonld",

@@ -15,11 +15,11 @@
         flmd:FileLevelMetadata ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     skos:definition "TEST DEMO of ESS-DIVE File Level Metadata standard" ;
-    linkml:generation_date "2021-11-07T14:14:59" ;
+    linkml:generation_date "2021-11-08T17:09:22" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "flmd.yaml" ;
-    linkml:source_file_date "2021-11-07T14:14:50" ;
-    linkml:source_file_size 10423 .
+    linkml:source_file_date "2021-11-07T14:17:49" ;
+    linkml:source_file_size 10415 .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" ;
@@ -186,32 +186,8 @@ flmd:FileLevelMetadata a owl:Class,
     rdfs:label "FileLevelMetadata" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty flmd:File_Version ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass <http://UNKNOWN.org/Data_Orientation_Enum> ;
-            owl:onProperty flmd:Data_Orientation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty flmd:Missing_Value_Codes ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty dcterms:description ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Datetime ;
-            owl:onProperty flmd:Date_End ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass flmd:DecimalDegree ;
-            owl:onProperty wgs:long ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass flmd:DecimalDegree ;
-            owl:onProperty wgs:lat ],
+            owl:onProperty flmd:Southeast_Latitude_Coordinate ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass flmd:DecimalDegree ;
@@ -219,23 +195,31 @@ flmd:FileLevelMetadata a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty skos:note ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass flmd:DecimalDegree ;
-            owl:onProperty flmd:Southeast_Latitude_Coordinate ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty flmd:File_Name ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
             owl:onProperty flmd:Contact ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty flmd:Northwest_Latitude_Coordinate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty flmd:Northwest_Longitude_Coordinate ],
+        [ a owl:Restriction ;
             owl:onClass linkml:String ;
-            owl:onProperty dcterms:conformsTo ],
+            owl:onProperty dcterms:description ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass flmd:DecimalDegree ;
+            owl:onProperty wgs:long ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:UTC_Offset ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass <http://UNKNOWN.org/Data_Orientation_Enum> ;
+            owl:onProperty flmd:Data_Orientation ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Datetime ;
@@ -243,15 +227,31 @@ flmd:FileLevelMetadata a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty flmd:UTC_Offset ],
+            owl:onProperty flmd:Missing_Value_Codes ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty skos:note ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Datetime ;
+            owl:onProperty flmd:Date_End ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:File_Version ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty dcterms:conformsTo ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty flmd:File_Name ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass flmd:DecimalDegree ;
-            owl:onProperty flmd:Northwest_Longitude_Coordinate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass flmd:DecimalDegree ;
-            owl:onProperty flmd:Northwest_Latitude_Coordinate ] ;
+            owl:onProperty wgs:lat ] ;
     skos:exactMatch csvw:Table .
 
 flmd:DecimalDegree a owl:Class,

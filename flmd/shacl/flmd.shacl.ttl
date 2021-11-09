@@ -14,84 +14,20 @@
 <https://w3id.org/essdive/flmd/FileLevelMetadata> a ns1:NodeShape ;
     ns1:closed true ;
     ns1:ignoredProperties ( rdf:type ) ;
-    ns1:property [ ns1:description "Provide the name of the associated file. File names should be unique and be as descriptive as possible about the file contents. Use only letters (e.g. CamelCase), numbers, and underscores. Do not include spaces. Hyphens allowed but not preferred. Use \"*\" wildcard when the FLMD applies to multiple files. For example - the same FLMD applies to all soil core files in this data package - \"soil_cores_*.csv\"      " ;
-            ns1:maxCount 1 ;
-            ns1:minCount 1 ;
-            ns1:name "Name of the file" ;
-            ns1:order 0 ;
-            ns1:path <https://w3id.org/essdive/flmd/File_Name> ],
+    ns1:property [ ns1:maxCount 1 ;
+            ns1:maxInclusive 90 ;
+            ns1:minInclusive -90 ;
+            ns1:order 12 ;
+            ns1:path <http://www.w3.org/2003/01/geo/wgs84_poslat> ],
         [ ns1:maxCount 1 ;
-            ns1:name "The earliest date in the file" ;
-            ns1:order 6 ;
-            ns1:path <https://w3id.org/essdive/flmd/Date_Start> ],
-        [ ns1:description "Information provided would be data file specific. Details may include details on data file versioning, reporting format, software requirements, data quality, etc." ;
-            ns1:maxCount 1 ;
-            ns1:name "Any information the provider would like to add." ;
-            ns1:order 16 ;
-            ns1:path <http://www.w3.org/2004/02/skos/core#note> ],
+            ns1:name "The latest date in the file" ;
+            ns1:order 7 ;
+            ns1:path <https://w3id.org/essdive/flmd/Date_End> ],
         [ ns1:description "Report all Missing Value Codes. For columns containing numeric data, use \"-9999\" as the missing value code (or modify to match significant figures given the data). For columns containing character data, use \"N/A\" as the missing value code. If entering more than one missing value code, use a vertical bar \"|\" or semicolon \";\" instead of a comma or protect the comma with matching double quotation marks around the entire value. For more information about commas not meant to be a delimiter (e.g. used within a cell), refer to the Delimiter section of the CSV Reporting Format Detailed Guide." ;
             ns1:maxCount 1 ;
             ns1:name "Report missing value codes" ;
             ns1:order 14 ;
             ns1:path <https://w3id.org/essdive/flmd/Missing_Value_Codes> ],
-        [ ns1:description "A brief description (minimum 30 characters) of the file and what distinguishes this file from other files in the data package. Include information about the type of data (images, observations, experimental, etc.)" ;
-            ns1:maxCount 1 ;
-            ns1:minCount 1 ;
-            ns1:name "A brief description of the file" ;
-            ns1:order 1 ;
-            ns1:path <http://purl.org/dc/terms/description> ],
-        [ ns1:description "This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
-            ns1:maxCount 1 ;
-            ns1:maxInclusive 90 ;
-            ns1:minInclusive -90 ;
-            ns1:name "Southeast Latitude Coordinate for non-point location" ;
-            ns1:order 10 ;
-            ns1:path <https://w3id.org/essdive/flmd/Southeast_Latitude_Coordinate> ],
-        [ ns1:description "Describe how the data are organized within the data matrix. Choose between \"horizontal\" (i.e., data are organized in rows) or \"vertical\" (i.e., data are organized in columns)." ;
-            ns1:in ( "horizontal" "vertical" ) ;
-            ns1:maxCount 1 ;
-            ns1:name "Orientation of tabular data" ;
-            ns1:order 15 ;
-            ns1:path <https://w3id.org/essdive/flmd/Data_Orientation> ],
-        [ ns1:description "Provide first and last name of the contact for the file. This should be someone with information already recorded at the Data Package Level" ;
-            ns1:maxCount 1 ;
-            ns1:name "Contact for the file" ;
-            ns1:order 5 ;
-            ns1:path <https://w3id.org/essdive/flmd/Contact> ],
-        [ ns1:description "This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
-            ns1:maxCount 1 ;
-            ns1:maxInclusive 90 ;
-            ns1:minInclusive -90 ;
-            ns1:name "Northwest Latitude Coordinate for non-point location" ;
-            ns1:order 8 ;
-            ns1:path <https://w3id.org/essdive/flmd/Northwest_Latitude_Coordinate> ],
-        [ ns1:description "This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
-            ns1:maxCount 1 ;
-            ns1:maxInclusive 90 ;
-            ns1:minInclusive -90 ;
-            ns1:name "Southeast Longitude Coordinate for non-point location" ;
-            ns1:order 11 ;
-            ns1:path <https://w3id.org/essdive/flmd/Southeast_Longitude_Coordinate> ],
-        [ ns1:maxCount 1 ;
-            ns1:maxInclusive 90 ;
-            ns1:minInclusive -90 ;
-            ns1:order 12 ;
-            ns1:path <http://www.w3.org/2003/01/geo/wgs84_poslat> ],
-        [ ns1:description "Report the Local Standard Time offset (+/- #hours) or time zone (abbreviations allowed). Do not report time using Daylight Savings Time." ;
-            ns1:maxCount 1 ;
-            ns1:name "Local Standard Time Offset" ;
-            ns1:order 3 ;
-            ns1:path <https://w3id.org/essdive/flmd/UTC_Offset> ;
-            ns1:pattern "^[\\+|\\-] \\d+ hours" ],
-        [ ns1:maxCount 1 ;
-            ns1:name "The latest date in the file" ;
-            ns1:order 7 ;
-            ns1:path <https://w3id.org/essdive/flmd/Date_End> ],
-        [ ns1:description "Identify if an ESS-DIVE Reporting Format or any other data or metadata standard was applied to the data file." ;
-            ns1:maxCount 1 ;
-            ns1:name "Standard applied to the data file." ;
-            ns1:order 2 ;
-            ns1:path <http://purl.org/dc/terms/conformsTo> ],
         [ ns1:description "This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
             ns1:maxCount 1 ;
             ns1:maxInclusive 90 ;
@@ -104,10 +40,74 @@
             ns1:name "The version of the file" ;
             ns1:order 4 ;
             ns1:path <https://w3id.org/essdive/flmd/File_Version> ],
+        [ ns1:description "Identify if an ESS-DIVE Reporting Format or any other data or metadata standard was applied to the data file." ;
+            ns1:maxCount 1 ;
+            ns1:name "Standard applied to the data file." ;
+            ns1:order 2 ;
+            ns1:path <http://purl.org/dc/terms/conformsTo> ],
+        [ ns1:description "Provide first and last name of the contact for the file. This should be someone with information already recorded at the Data Package Level" ;
+            ns1:maxCount 1 ;
+            ns1:name "Contact for the file" ;
+            ns1:order 5 ;
+            ns1:path <https://w3id.org/essdive/flmd/Contact> ],
+        [ ns1:description "This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+            ns1:maxCount 1 ;
+            ns1:maxInclusive 90 ;
+            ns1:minInclusive -90 ;
+            ns1:name "Southeast Longitude Coordinate for non-point location" ;
+            ns1:order 11 ;
+            ns1:path <https://w3id.org/essdive/flmd/Southeast_Longitude_Coordinate> ],
+        [ ns1:description "A brief description (minimum 30 characters) of the file and what distinguishes this file from other files in the data package. Include information about the type of data (images, observations, experimental, etc.)" ;
+            ns1:maxCount 1 ;
+            ns1:minCount 1 ;
+            ns1:name "A brief description of the file" ;
+            ns1:order 1 ;
+            ns1:path <http://purl.org/dc/terms/description> ],
+        [ ns1:description "This is part of a coordinate pair to form the Northwest corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+            ns1:maxCount 1 ;
+            ns1:maxInclusive 90 ;
+            ns1:minInclusive -90 ;
+            ns1:name "Northwest Latitude Coordinate for non-point location" ;
+            ns1:order 8 ;
+            ns1:path <https://w3id.org/essdive/flmd/Northwest_Latitude_Coordinate> ],
         [ ns1:maxCount 1 ;
             ns1:maxInclusive 90 ;
             ns1:minInclusive -90 ;
             ns1:order 13 ;
-            ns1:path <http://www.w3.org/2003/01/geo/wgs84_poslong> ] ;
+            ns1:path <http://www.w3.org/2003/01/geo/wgs84_poslong> ],
+        [ ns1:description "Report the Local Standard Time offset (+/- #hours) or time zone (abbreviations allowed). Do not report time using Daylight Savings Time." ;
+            ns1:maxCount 1 ;
+            ns1:name "Local Standard Time Offset" ;
+            ns1:order 3 ;
+            ns1:path <https://w3id.org/essdive/flmd/UTC_Offset> ;
+            ns1:pattern "^[\\+|\\-] \\d+ hours" ],
+        [ ns1:description "Information provided would be data file specific. Details may include details on data file versioning, reporting format, software requirements, data quality, etc." ;
+            ns1:maxCount 1 ;
+            ns1:name "Any information the provider would like to add." ;
+            ns1:order 16 ;
+            ns1:path <http://www.w3.org/2004/02/skos/core#note> ],
+        [ ns1:description "Provide the name of the associated file. File names should be unique and be as descriptive as possible about the file contents. Use only letters (e.g. CamelCase), numbers, and underscores. Do not include spaces. Hyphens allowed but not preferred. Use \"*\" wildcard when the FLMD applies to multiple files. For example - the same FLMD applies to all soil core files in this data package - \"soil_cores_*.csv\"      " ;
+            ns1:maxCount 1 ;
+            ns1:minCount 1 ;
+            ns1:name "Name of the file" ;
+            ns1:order 0 ;
+            ns1:path <https://w3id.org/essdive/flmd/File_Name> ],
+        [ ns1:description "This is part of a coordinate pair to form the Southeast corner of a bounding box for non-point locations. All geographic coordinates must be provided in WGS84 decimal format. It is strongly recommended to record the geographic coordinates in the FLMD in cases where the data file does not include geographic coordinates and the entire file consists of measurements collected at a single location. The FLMD Extractor can extract the geographic coordinates or bounding box coordinates from a CSV file following the CSV Reporting Format." ;
+            ns1:maxCount 1 ;
+            ns1:maxInclusive 90 ;
+            ns1:minInclusive -90 ;
+            ns1:name "Southeast Latitude Coordinate for non-point location" ;
+            ns1:order 10 ;
+            ns1:path <https://w3id.org/essdive/flmd/Southeast_Latitude_Coordinate> ],
+        [ ns1:maxCount 1 ;
+            ns1:name "The earliest date in the file" ;
+            ns1:order 6 ;
+            ns1:path <https://w3id.org/essdive/flmd/Date_Start> ],
+        [ ns1:description "Describe how the data are organized within the data matrix. Choose between \"horizontal\" (i.e., data are organized in rows) or \"vertical\" (i.e., data are organized in columns)." ;
+            ns1:in ( "horizontal" "vertical" ) ;
+            ns1:maxCount 1 ;
+            ns1:name "Orientation of tabular data" ;
+            ns1:order 15 ;
+            ns1:path <https://w3id.org/essdive/flmd/Data_Orientation> ] ;
     ns1:targetClass <https://w3id.org/essdive/flmd/FileLevelMetadata> .
 
